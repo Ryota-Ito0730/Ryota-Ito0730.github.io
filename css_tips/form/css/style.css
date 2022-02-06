@@ -29,6 +29,12 @@
   font-size: 0;
 }
 
+/* ios対策の実験としてid="html"のinputタグだけ下記スタイルを設置*/
+input#html {
+  -webkit-appearance: none;
+}
+/* ios対策の実験としてid="html"のinputタグだけ上記スタイルを設置*/
+
 input {
   width: 5%;
   font-size: 16px;
