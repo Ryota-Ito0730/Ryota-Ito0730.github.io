@@ -28,20 +28,31 @@
   width: 100%;
   font-size: 0;
 }
+/* inpustタグ全体 */
+input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 16px;
+  margin: 0 2% 0 2%;
+}
 
 /* ios対策の実験としてid="html"のinputタグだけ下記スタイルを設置*/
 input#html {
+  /* ios対策のスタイルを追加していく*/
   -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  font-size: 16px;
 }
 /* ios対策の実験としてid="html"のinputタグだけ上記スタイルを設置*/
 
-input {
-  width: 5%;
-  font-size: 16px;
-}
 label {
   display: inline-block;
   width: 44%;
+  margin: 0 0 0 0;
   font-size: 16px;
 }
 
@@ -57,18 +68,42 @@ label {
     padding: 20px;
     margin: auto;
   }
-  input {
-    width: 5%;
-    transform: translateY(3px);
+
+  /* inpustタグ全体 */
+  input[type="checkbox"] {
+    margin: 0 1% 0 1%;
   }
+
   label {
-    width: 90%;
+    width: 40%;
     font-size: 14px;
     margin: 0 0 0 5%;
   }
 }
 
+@media (max-width: 560px) {
+  input[type="checkbox"] {
+    margin: 0 1.2% 0 1.2%;
+  }
+  label {
+    width: 38%;
+    font-size: 14px;
+    margin: 0 0 0 5%;
+  }
+  .form_wrapper h3 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 450px) {
+  input[type="checkbox"] {
+    margin: 0 2% 0 2%;
+  }
+  label {
+    width: 83%;
+    font-size: 14px;
+    margin: 0 0 0 5%;
+  }
   .form_wrapper h3 {
     font-size: 20px;
   }
