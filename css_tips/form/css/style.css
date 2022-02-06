@@ -1,0 +1,69 @@
+@charset "urt-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form_wrapper {
+  /* width: 1000px; */
+  max-width: 1000px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  margin: auto;
+  background: #f1f1f1;
+}
+.form_wrapper h3 {
+  text-align: center;
+  font-size: 26px;
+  padding: 32px 0px;
+}
+
+.form_wrapper h3 br {
+  display: none;
+}
+
+/* チェックボックスとラベルのカラム落ちを防ぐため、inputとlabelがinline-blockの場合、親要素にfont-sizeを指定し、各子要素にはfont-size:0;を設定する */
+.form_inner {
+  background: #fff;
+  width: 100%;
+  font-size: 0;
+}
+
+input {
+  width: 5%;
+  font-size: 16px;
+}
+label {
+  display: inline-block;
+  width: 44%;
+  font-size: 16px;
+}
+
+@media (max-width: 767px) {
+  .form_wrapper h3 {
+    font-size: 24px;
+  }
+  .form_wrapper h3 br {
+    display: block;
+  }
+  .form_inner {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+  }
+  input {
+    width: 5%;
+    transform: translateY(3px);
+  }
+  label {
+    width: 90%;
+    font-size: 14px;
+    margin: 0 0 0 5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .form_wrapper h3 {
+    font-size: 20px;
+  }
+}
