@@ -84,6 +84,7 @@ input[type="checkbox"]#html:checked::before {
   border-bottom: 2px solid #ffffff;
   transform: rotate(-47deg);
 }
+
 /* ios対策の実験としてid="html"のinputタグだけ上記スタイルを設置*/
 
 label {
@@ -92,6 +93,12 @@ label {
   margin: 0 0 0 0;
   font-size: 16px;
 }
+
+/* ios対策の実験としてfor="html"のlabelタグだけ下記スタイルを設置*/
+label[for="html"] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* ios対策の実験としてfor="html"のlabelタグだけ上記スタイルを設置*/
 
 @media (max-width: 767px) {
   .form_wrapper h3 {
