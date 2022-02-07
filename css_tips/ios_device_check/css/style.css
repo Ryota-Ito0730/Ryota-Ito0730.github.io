@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* 初期値の背景色は白。デバイスの横幅に応じて背景色を変更していく*/
+.bg {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+}
+
+/* iPhone11 横向きに切り替え時 width 896 px*/
+@media (max-width: 896px) {
+  .bg {
+    background: blue;
+  }
+}
+
+/* iPhone11 width 414 px*/
+@media (max-width: 414px) {
+  .bg {
+    background: yellow;
+  }
+}
