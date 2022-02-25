@@ -18,6 +18,7 @@ main {
 main .flex_box {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 main .flex_box .link {
@@ -63,6 +64,7 @@ main a > div {
 main .flex_box .link h3 {
   text-align: center;
   font-weight: 400;
+  padding: 12px 0px;
 }
 main .flex_box .link h3.css {
   background: linear-gradient(142deg, rgba(2, 0, 36, 1) 0%, rgba(60, 156, 215, 1) 0%, rgba(32, 98, 175, 1) 100%);
