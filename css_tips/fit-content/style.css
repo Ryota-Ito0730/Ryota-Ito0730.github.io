@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+a:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  padding: 36px 10px;
+}
+
+p {
+  font-size: 22px;
+}
+
+div {
+  padding: 20px 10px;
+}
+
+.common_text_style {
+  margin: 0 auto 50px;
+  text-decoration: underline;
+}
+
+.under_line_a {
+  width: fit-content;
+}
+
+.under_line_b {
+  width: fit-content;
+  width: -webkit-fit-content;
+}
+
+.under_line_c {
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+/* 以下は公式ドキュメントとcan i useへのリンク */
+div.link_wrapper {
+  padding: 20px 10px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  margin: auto;
+}
+div.link_wrapper a.can_i_use {
+  background: #eb8900;
+  color: #fff;
+  padding: 8px;
+  margin: 0 10px 0 0;
+}
+div.link_wrapper a.mdn {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 8px;
+  margin: 0 0 0 10px;
+}
+
+@media (max-width: 300px) {
+  div.link_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  div.link_wrapper a.can_i_use {
+    margin: 0 0 26px 0;
+  }
+  div.link_wrapper a.mdn {
+    margin: 0;
+  }
+}
