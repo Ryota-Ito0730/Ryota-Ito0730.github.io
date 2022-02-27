@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+div.wrapp {
+  max-width: 1200px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(157deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 7%, rgba(0, 212, 255, 1) 100%);
+  padding: 120px 10px;
+  margin: 120px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+div.wrapp p {
+  font-size: 24px;
+}
+/* 本文中のfont-sizeに下記要素内の */
+div.wrapp p span.annotation_marker {
+  /* ※印の左右横幅をどの程度あけるかをwidthで設定 */
+  width: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+div.wrapp p span.annotation_marker::before {
+  content: "※";
+  font-size: 0.2em;
+  font-weight: 700;
+  color: red;
+  position: absolute;
+  left: 50%;
+  /* ※印のY軸をtranslateYで調整 */
+  transform: translate(-50%, -24px);
+}
