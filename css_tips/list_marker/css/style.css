@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+div.wrapp {
+  max-width: 1200px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(157deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 7%, rgba(0, 212, 255, 1) 100%);
+  padding: 120px 10px;
+  margin: 120px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* 要素標準のリストマーカーは使用せずに表現 */
+li {
+  position: relative;
+  font-size: 20px;
+  padding: 0 0 0 1em;
+  margin: 0 0 10px 0;
+}
+li::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  top: 12px;
+  left: 10px;
+  background: #fff;
+  border-radius: 50%;
+}
