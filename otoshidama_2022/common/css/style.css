@@ -4,9 +4,13 @@
   padding: 0;
 }
 
+html {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 body {
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
-    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 }
 
 #otoshidama_2022 .main_title_wrapper {
@@ -36,23 +40,22 @@ body {
   height: 100px;
   border-radius: 50%;
   background: #ffd900;
-  box-shadow: 0px 8px 0px 0px #e0bf00;
   -webkit-box-shadow: 0px 8px 0px 0px #e0bf00;
+          box-shadow: 0px 8px 0px 0px #e0bf00;
   border: none;
   font-size: 20px;
   transform: translate(-50%, -50%);
+  -webkit-transform: -webkit-translate(-50%, -50%);
+  -webkit-transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
   transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
   transition: transform ease-out 0.1s, box-shadow ease-out 0.1s;
-  transition: transform ease-out 0.1s, box-shadow ease-out 0.1s, -webkit-transform ease-out 0.1s,
-    -webkit-box-shadow ease-out 0.1s;
+  transition: transform ease-out 0.1s, box-shadow ease-out 0.1s, -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
   -webkit-transition: -webkit-transform ease-out 0.1s, box-shadow ease-out 0.1s;
-  -webkit-transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
-  -webkit-transform: -webkit-translate(-50%, -50%);
 }
 
 #otoshidama_2022 button.btn:active {
   -webkit-box-shadow: 0px 0px 0px 0px #e0bf00;
-  box-shadow: 0px 0px 0px 0px #e0bf00;
+          box-shadow: 0px 0px 0px 0px #e0bf00;
   color: #f3f3f3;
   transform: translate(-50%, calc(-50% + 8px));
   -webkit-transform: -webkit-translate(-50%, calc(-50% + 8px));
@@ -81,7 +84,7 @@ body {
 
 #otoshidama_2022 p#current_money.js_popup_active {
   -webkit-animation: popup_animation ease-out 0.1s forwards;
-  animation: popup_animation ease-out 0.1s forwards;
+          animation: popup_animation ease-out 0.1s forwards;
 }
 
 @-webkit-keyframes popup_animation {

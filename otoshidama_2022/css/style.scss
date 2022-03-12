@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-// html {touch-action: manipulation;}
+html {
+  touch-action: manipulation;
+}
 body {
   font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
     "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
