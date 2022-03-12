@@ -5,7 +5,8 @@
 }
 
 body {
-  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 }
 
 #otoshidama_2022 .main_title_wrapper {
@@ -31,28 +32,30 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   width: 140px;
   height: 100px;
   border-radius: 50%;
   background: #ffd900;
+  box-shadow: 0px 8px 0px 0px #e0bf00;
   -webkit-box-shadow: 0px 8px 0px 0px #e0bf00;
-          box-shadow: 0px 8px 0px 0px #e0bf00;
   border: none;
-  -webkit-transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
   transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
   transition: transform ease-out 0.1s, box-shadow ease-out 0.1s;
-  transition: transform ease-out 0.1s, box-shadow ease-out 0.1s, -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
-  font-size: 20px;
+  transition: transform ease-out 0.1s, box-shadow ease-out 0.1s, -webkit-transform ease-out 0.1s,
+    -webkit-box-shadow ease-out 0.1s;
+  -webkit-transition: -webkit-transform ease-out 0.1s, box-shadow ease-out 0.1s;
+  -webkit-transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
+  -webkit-transform: -webkit-translate(-50%, -50%);
 }
 
 #otoshidama_2022 button.btn:active {
-  -webkit-transform: translate(-50%, calc(-50% + 8px));
-          transform: translate(-50%, calc(-50% + 8px));
   -webkit-box-shadow: 0px 0px 0px 0px #e0bf00;
-          box-shadow: 0px 0px 0px 0px #e0bf00;
+  box-shadow: 0px 0px 0px 0px #e0bf00;
   color: #f3f3f3;
+  transform: translate(-50%, calc(-50% + 8px));
+  -webkit-transform: -webkit-translate(-50%, calc(-50% + 8px));
 }
 
 #otoshidama_2022 span.js_second {
@@ -65,50 +68,52 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -380%);
-          transform: translate(-50%, -380%);
   font-size: 26px;
   z-index: -1;
+  transform: translate(-50%, -380%);
+  -webkit-transform: -webkit-translate(-50%, -380%);
   -webkit-transition: -webkit-transform 0.1s;
   transition: -webkit-transform 0.1s;
   transition: transform 0.1s;
   transition: transform 0.1s, -webkit-transform 0.1s;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
 }
 
 #otoshidama_2022 p#current_money.js_popup_active {
   -webkit-animation: popup_animation ease-out 0.1s forwards;
-          animation: popup_animation ease-out 0.1s forwards;
+  animation: popup_animation ease-out 0.1s forwards;
 }
 
 @-webkit-keyframes popup_animation {
   0% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: -webkit-translate(-50%, -50%);
   }
   100% {
-    -webkit-transform: translate(-50%, -380%);
-            transform: translate(-50%, -380%);
+    transform: translate(-50%, -380%);
+    -webkit-transform: -webkit-translate(-50%, -380%);
   }
 }
 
 @keyframes popup_animation {
   0% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform: -webkit-translate(-50%, -50%);
   }
   100% {
-    -webkit-transform: translate(-50%, -380%);
-            transform: translate(-50%, -380%);
+    transform: translate(-50%, -380%);
+    -webkit-transform: -webkit-translate(-50%, -380%);
   }
 }
 
 #otoshidama_2022 p#current_money.js_popup_end {
+  transform: translate(-50%, -200%);
+  -webkit-transform: -webkit-translate(-50%, -200%);
   -webkit-transition: -webkit-transform 0.8s ease-out;
   transition: -webkit-transform 0.8s ease-out;
   transition: transform 0.8s ease-out;
   transition: transform 0.8s ease-out, -webkit-transform 0.8s ease-out;
-  -webkit-transform: translate(-50%, -200%);
-          transform: translate(-50%, -200%);
+  -webkit-transition: transform 0.8s ease-out;
 }
 
 @media (max-width: 450px) {
