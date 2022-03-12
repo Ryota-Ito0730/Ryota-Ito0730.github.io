@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#otoshidama_2022 .main_title_wrapper h1 {
+  text-align: center;
+}
+
+#otoshidama_2022 .main_title_wrapper p {
+  text-align: center;
+}
+
+#otoshidama_2022 .wrapper {
+  max-width: 1000px;
+  margin: 80px auto;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
