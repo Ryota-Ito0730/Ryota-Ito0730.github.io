@@ -1,6 +1,9 @@
 // 暫定的にページ読み込み完了後という区切りを付けるが、正確には特定要素読み込み後から開始させる
 window.addEventListener('load', function () {
   'use strict';
+  // ダブルクリック/タップ無効化
+  document.addEventListener('dblclick', function (e) { e.preventDefault(); }, { passive: false });
+
   // ボタン要素取得
   const btn = document.getElementById('push_btn');
   // 金額表示部分
