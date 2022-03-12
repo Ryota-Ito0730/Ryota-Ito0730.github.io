@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
   'use strict';
   // ダブルクリック/タップ無効化
-  document.addEventListener('dblclick', function (e) { e.preventDefault(); }, { passive: false });
+  // document.addEventListener('dblclick', function (e) { e.preventDefault(); }, { passive: false });
 
   // ボタン要素取得
   const btn = document.getElementById('push_btn');
