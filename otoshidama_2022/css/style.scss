@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
 #otoshidama_2022 .main_title_wrapper {
   padding: 30px 0;
 }
@@ -75,6 +78,24 @@
 }
 
 #otoshidama_2022 p#current_money.js_popup_end {
-  transition:transform 0.8s ease-out;
+  transition: transform 0.8s ease-out;
   transform: translate(-50%, -200%);
+}
+
+@media (max-width: 450px) {
+  #otoshidama_2022 p#current_money.js_popup_end {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  #otoshidama_2022 p#current_money.js_popup_end {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  #otoshidama_2022 p#current_money.js_popup_end {
+    font-size: 18px;
+  }
 }
