@@ -38,14 +38,14 @@ window.addEventListener('load', function () {
     el01.disabled = true;
   }
   function btn_stopp_after_reading() {
-    document.getElementById('h1_text').innerText = 'そこまで！！'
+    document.getElementById('h1_text').innerText = 'おつかれさまでした'
     btn_stopper(btn);
     setTimeout(totalMoney, 1000);
 
   }
   function totalMoney() {
     money.classList.add('js_popup_end');
-    money.innerHTML = '合計' + '￥' + yen_total + '<br>' + 'ゲットしました！';
+    money.innerHTML = '合計' + '￥' + yen_total + '<br>' + 'ゲットしました';
   }
   function timeCounterDisplay() {
     setTimeout(timeCounter, 1000);
