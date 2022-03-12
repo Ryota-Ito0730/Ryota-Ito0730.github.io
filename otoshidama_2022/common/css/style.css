@@ -40,17 +40,17 @@ body {
   height: 100px;
   border-radius: 50%;
   background: #ffd900;
+  box-shadow: 0px 8px 0px 0px #e0bf00;
   -webkit-box-shadow: 0px 8px 0px 0px #e0bf00;
-          box-shadow: 0px 8px 0px 0px #e0bf00;
   border: none;
   font-size: 20px;
   transform: translate(-50%, -50%);
   -webkit-transform: -webkit-translate(-50%, -50%);
-  -webkit-transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
   transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
   transition: transform ease-out 0.1s, box-shadow ease-out 0.1s;
   transition: transform ease-out 0.1s, box-shadow ease-out 0.1s, -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
-  -webkit-transition: -webkit-transform ease-out 0.1s, box-shadow ease-out 0.1s;
+  -webkit-transition: -webkit-transform ease-out 0.1s, -webkit-box-shadow ease-out 0.1s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 #otoshidama_2022 button.btn:active {
@@ -59,6 +59,7 @@ body {
   color: #f3f3f3;
   transform: translate(-50%, calc(-50% + 8px));
   -webkit-transform: -webkit-translate(-50%, calc(-50% + 8px));
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 #otoshidama_2022 span.js_second {
