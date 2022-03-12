@@ -3,8 +3,11 @@
   margin: 0;
   padding: 0;
 }
-#otoshidama_2022 {
+
+#otoshidama_2022 .main_title_wrapper {
+  padding: 30px 0;
 }
+
 #otoshidama_2022 .main_title_wrapper h1 {
   text-align: center;
 }
@@ -12,7 +15,66 @@
   text-align: center;
 }
 #otoshidama_2022 .wrapper {
+  position: relative;
   max-width: 1000px;
-  margin: 80px auto;
+  margin: 200px auto 0;
   text-align: center;
+}
+
+// ボタンスタイル
+#otoshidama_2022 .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 140px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgb(255, 217, 0);
+  box-shadow: 0px 8px 0px 0px #e0bf00;
+  border: none;
+  transition: transform ease-out 0.1s, box-shadow ease-out 0.1s;
+  font-size: 20px;
+}
+
+#otoshidama_2022 button.btn:active {
+  transform: translate(-50%, calc(-50% + 8px));
+  box-shadow: 0px 0px 0px 0px #e0bf00;
+  color: #f3f3f3;
+}
+
+// 残り時間
+#otoshidama_2022 span.js_second {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+// 金額スタイル
+#otoshidama_2022 p#current_money {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -380%);
+  font-size: 26px;
+  z-index: -1;
+  transition: transform 0.1s;
+}
+
+#otoshidama_2022 p#current_money.js_popup_active {
+  animation: popup_animation ease-out 0.1s forwards;
+}
+@keyframes popup_animation {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -380%);
+  }
+}
+
+#otoshidama_2022 p#current_money.js_popup_end {
+  transition:transform 0.8s ease-out;
+  transform: translate(-50%, -200%);
 }

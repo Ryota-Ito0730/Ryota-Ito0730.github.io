@@ -12,23 +12,25 @@ window.addEventListener('load', function () {
   // ボタン連打初期値
   let i = 0;
   // ここの時間(秒換算)をページ内に残り～秒として表示させる大元の数値とする/setTimeout内と共用
-  const millisecond = 10000;
+  const millisecond = 3000;
   // ボタン連打ができる残時間
   let time = millisecond / 1000;
   let j = 0;
   // 時間表示部分
   const time_count = document.getElementById('time_count');
+  console.log(time_count);
   //初期値
   let elapsedTime = time;
-  time_count.innerText = 'あと' + elapsedTime + '秒';
+  time_count.innerHTML = 'あと' + '<span class="js_second">' + elapsedTime + '</span>' + '秒';
+
   function timeCounter() {
     let timeoutID = setTimeout(timeCounter, 1000);
-    if (j === 10) {
+    if (j === 3) {
       clearTimeout(timeoutID);
       btn_stopp_after_reading();
     }
     elapsedTime = time - j++;
-    time_count.innerText = 'あと' + elapsedTime + '秒';
+    time_count.innerHTML = 'あと' + '<span class="js_second">' + elapsedTime + '</span>' + '秒';
 
   }
   // ボタン要素非活性化(暫定設定→読み込み直後から60秒後)
@@ -38,8 +40,13 @@ window.addEventListener('load', function () {
   function btn_stopp_after_reading() {
     document.getElementById('h1_text').innerText = 'そこまで！！'
     btn_stopper(btn);
-  }
+    setTimeout(totalMoney, 1000);
 
+  }
+  function totalMoney() {
+    money.classList.add('js_popup_end');
+    money.innerHTML = '合計' + '￥' + yen_total + '<br>' + 'ゲットしました！';
+  }
   function timeCounterDisplay() {
     setTimeout(timeCounter, 1000);
   }
@@ -47,9 +54,12 @@ window.addEventListener('load', function () {
   timeCounterDisplay();
 
   money.innerText = '￥' + yen_total;
-  btn.addEventListener('click', function () {
+  btn.addEventListener('mousedown', function () {
     yen_total = yen * i++;
     money.innerText = '￥' + yen_total;
+    money.classList.add('js_popup_active');
+    money.addEventListener('animationend', function () {
+      money.classList.remove('js_popup_active');
+    });
   });
-
 });
