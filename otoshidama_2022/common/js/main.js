@@ -1,6 +1,9 @@
 // 暫定的にページ読み込み完了後という区切りを付けるが、正確には特定要素読み込み後から開始させる
 window.addEventListener('load', function () {
   'use strict';
+  // ローディング画面
+  document.getElementById('loading').classList.add('active');
+
   // ダブルクリック/タップ無効化
   document.addEventListener('dblclick', function (e) { e.preventDefault(); }, { passive: false });
 
@@ -15,7 +18,7 @@ window.addEventListener('load', function () {
   // ボタン連打初期値
   let i = 0;
   // ここの時間(秒換算)をページ内に残り～秒として表示させる大元の数値とする/setTimeout内と共用
-  const millisecond = 30000;
+  const millisecond = 5000;
   // ボタン連打ができる残時間
   let time = millisecond / 1000;
   let j = 0;
@@ -44,11 +47,15 @@ window.addEventListener('load', function () {
     document.getElementById('h1_text').innerText = 'おつかれさまでした'
     btn_stopper(btn);
     setTimeout(totalMoney, 1000);
-
   }
   function totalMoney() {
     money.classList.add('js_popup_end');
     money.innerHTML = '合計' + '￥' + yen_total + '<br>' + 'ゲットしました';
+    setTimeout(closingPlayMode, 3000);
+  }
+  function closingPlayMode() {
+    // クロージング画面
+    document.getElementById('closing').classList.add('active');
   }
   function timeCounterDisplay() {
     setTimeout(timeCounter, 1000);
