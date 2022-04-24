@@ -2,8 +2,8 @@
     "theme_color": "#ffd900",
     "background_color": "#e0bf00",
     "display": "browser",
-    "scope": "/otoshidama_2022/",
-    "start_url": ".",
+    "scope": "https://ryota-ito0730.github.io/otoshidama_2022/",
+    "start_url": "https://ryota-ito0730.github.io/otoshidama_2022/",
     "name": "Otoshidama Kasegi 2022",
     "short_name": "Otoshidama Kasegi 2022",
     "icons": [
