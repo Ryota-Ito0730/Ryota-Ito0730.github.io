@@ -2,8 +2,8 @@
     "theme_color": "#ffd900",
     "background_color": "#e0bf00",
     "display": "browser",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "/otoshidama_2022/",
+    "start_url": "/otoshidama_2022/index.html",
     "name": "Otoshidama Kasegi 2022",
     "short_name": "Otoshidama Kasegi 2022",
     "icons": [
