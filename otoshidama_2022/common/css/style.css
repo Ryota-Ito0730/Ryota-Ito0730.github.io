@@ -7,6 +7,10 @@
 html {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
