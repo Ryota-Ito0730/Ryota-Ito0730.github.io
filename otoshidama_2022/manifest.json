@@ -2,7 +2,7 @@
     "name": "Otoshidama Kasegi 2022 PWA",
     "short_name": "OdK2022PWA",
     "description": "お年玉かせぎ2022のPWAです",
-    "start_url": "/?pwa=1",
+    "start_url": "/otoshidama_2022/?pwa=1",
     "display": "standalone",
     "background_color": "#e0bf00",
     "theme_color": "#ffd900",
