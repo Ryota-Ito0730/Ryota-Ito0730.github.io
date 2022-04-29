@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
   // ボタン連打初期値
   let i = 0;
   // ここの時間(秒換算)をページ内に残り～秒として表示させる大元の数値とする/setTimeout内と共用
-  const millisecond = 5000;
+  const millisecond = 30000;
   // ボタン連打ができる残時間
   let time = millisecond / 1000;
   let j = 0;
@@ -42,6 +42,7 @@ window.addEventListener('load', function () {
   // ボタン要素非活性化(暫定設定→読み込み直後から60秒後)
   function btn_stopper(el01) {
     el01.disabled = true;
+    el01.classList.add('stopped');
   }
   function btn_stopp_after_reading() {
     document.getElementById('h1_text').innerText = 'おつかれさまでした'
